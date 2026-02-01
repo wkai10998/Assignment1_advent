@@ -1,3 +1,31 @@
 date: 2026.1.31
-1.坐标系想到元组，因为不可变、自动去重想到集合、列表不兼容
+1.元组：坐标系想到元组，因为不可变、自动去重想到集合、列表不兼容
 2.判断奇数偶数顺序的方法：if index%2==0/1
+
+date: 2026.2.1
+1.按照行/字符遍历文件：
+with open('input/day_03.txt', 'r') as file_object:
+    input_text = file_object.read()。 ———— #把文件所有内容读成「一个完整的大字符串」，所以遍历的时候是每读一个字符#
+    for line in file_object:————#这种遍历的就是按行拆，得到的是文件对象 =read() → split('\n') #
+2.print(repr(内容))：
+    能够显示隐藏字符，如\n
+3.strip()与split():
+    整理数据形式时很常用
+4.方法的返回值
+    (1)只修改不赋值(append/sort)：返回None，只需调用，不要赋值
+        eg：clean_input=clean_input.append(clean_line)————#错误写法
+    (2)处理并返回新值(strip/split)：返回有效结果，需要赋值给变量使用。
+5.字典与二维列表
+    (1)字典：无规律、需要快速按 “标识” 查数据，比如存学生信息
+    (2)二维列表：有规律、按 “位置 / 范围” 操作数据，比如包含位置信息的网格
+    # 空二维列表
+light_grid = []
+# 建1000x1000网格（1000行，每行1000列，初始全False）
+for x in range(1000):
+    row = []  # 每一行的列表
+    for y in range(1000):
+        row.append(False)
+    light_grid.append(row)
+# 取/改数据：通过行下标x + 列下标y
+light_grid[0][0] = True  # (0,0)位置的灯，改成开
+print(light_grid[0][0])  # 输出True
