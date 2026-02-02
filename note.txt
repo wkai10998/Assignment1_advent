@@ -11,6 +11,8 @@ with open('input/day_03.txt', 'r') as file_object:
     能够显示隐藏字符，如\n
 3.strip()与split():
     整理数据形式时很常用
+    eg：# clean_line = line.strip() #括号不传参数时，默认删除字符串「开头 + 结尾」的所有「空白字符」
+        # if clean_line: #用布尔值判断，提取有效字符、防止有空行返回空值
 4.方法的返回值
     (1)只修改不赋值(append/sort)：返回None，只需调用，不要赋值
         eg：clean_input=clean_input.append(clean_line)————#错误写法
@@ -29,3 +31,12 @@ for x in range(1000):
 # 取/改数据：通过行下标x + 列下标y
 light_grid[0][0] = True  # (0,0)位置的灯，改成开
 print(light_grid[0][0])  # 输出True
+
+date: 2026.2.1
+1.字典中的遍历：
+    （1）只遍历键：#写法1：直接遍历字典（默认遍历键）for k in student:
+                 #写法2：用 .keys() 方法（明确指定遍历键，可读性更高）for k in student.keys():
+    （2）只遍历值：#用 .values() 方法遍历所有值 for v in student.values()
+    （3）遍历键和值：#用 .items() 方法同时遍历键和值，k接收键，v接收值 for k, v in student.items():
+2.map()的用法
+    x1, y1 = map(int, pos1.split(","))
