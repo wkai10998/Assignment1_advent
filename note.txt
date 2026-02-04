@@ -40,3 +40,10 @@ date: 2026.2.1
     （3）遍历键和值：#用 .items() 方法同时遍历键和值，k接收键，v接收值 for k, v in student.items():
 2.map()的用法
     x1, y1 = map(int, pos1.split(","))
+
+date: 2026.2.4
+1.环形边界问题，没思路的时候可以用例子演化逻辑
+2.批量注释：cmd+/
+  批量缩进/反缩进：tab,shift+tab
+3.%取模运算：
+    在 Python 中计算： -5 % 100 = 95。

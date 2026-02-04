@@ -13,8 +13,8 @@ with open('input/day_06.txt', 'r') as file_object:
     input_text = file_object.read()
     input_text = input_text.split('\n')
     for chunk in input_text:
-        for chunk in input_text:
-            chunk = chunk.strip()
+        chunk = chunk.strip()
+        if chunk:
             chunk_part = chunk.split(' ')
             if chunk_part[0]=="toggle":
                 op = 'toggle'
